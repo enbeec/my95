@@ -11,14 +11,12 @@ import {
 } from "react95";
 import useClickOutside from "../hooks/useClickOutside";
 import { AppToggle } from "./AppToggle";
-import useKeyboardShortcut from "use-keyboard-shortcut";
 import vcLogo from "../vc_logo.png";
 
 export const TopBar = ({ openStates, children, ...props }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [optionsMenuOpen, setOptionsMenuOpen] = useState(false);
 
-  const dummyRef = useRef();
   const menuRef = useRef();
   useClickOutside(menuRef, () => {
     menuOpen && setMenuOpen(!menuOpen);
@@ -33,7 +31,7 @@ export const TopBar = ({ openStates, children, ...props }) => {
           active={menuOpen}
           ref={menuRef}
         >
-          <img style={{ height: "20px" }} src={vcLogo} />
+          <img style={{ height: "20px" }} src={vcLogo} alt="logo" />
           <div style={{ height: "20px" }}>Menu</div>
         </Button>
         {/* I got a menu tree to work!! */}
