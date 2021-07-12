@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import original from "react95/dist/themes/original";
 import { TopBar } from "./TopBar";
-import { Cutout, Divider, Button } from "react95";
+import { Divider, Button } from "react95";
 
 const GlobalStyles = createGlobalStyle`
   body {
